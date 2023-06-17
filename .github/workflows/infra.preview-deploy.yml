@@ -1,0 +1,17 @@
+name: 'infra preview & deploy'
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 10_infra/**
+      - .github/workflows/**
+
+jobs:
+  preview:
+    name: 'preview'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Hello World"
